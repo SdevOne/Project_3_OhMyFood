@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "file": "main.css",
+  "sources": [
+    "main.scss",
+    "sass_folders/base/_base.scss",
+    "sass_folders/base/_typography.scss",
+    "sass_folders/composants/_btn.scss",
+    "sass_folders/composants/_novelty_alert.scss",
+    "sass_folders/layouts/_header.scss",
+    "sass_folders/layouts/_footer.scss",
+    "sass_folders/pages/_home_restaurants.scss",
+    "sass_folders/pages/_home_rules.scss",
+    "sass_folders/utils/_variables.scss"
+  ],
+  "mappings": ";ACEA,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,KAAM,GACpB;;;AAID,AAAA,EAAE;AACF,AAAA,CAAC,CAAC;EACE,WAAW,ECPF,QAAQ,EACrB,UAAU,GDOT;;;AAED,AAAA,CAAC,CAAC;EACE,eAAe,EAAE,IAAK,GACzB;;AQJD;oBACoB",
+  "names": []
+}

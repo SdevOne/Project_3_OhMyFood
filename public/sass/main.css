@@ -1,0 +1,17 @@
+/* line 3, /Users/sd/Documents/Formation FrontEnd/P3_Ndiaye_Salmane/NdiayeSalmane_3_03122020/public/sass/sass_folders/base/_base.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 9, /Users/sd/Documents/Formation FrontEnd/P3_Ndiaye_Salmane/NdiayeSalmane_3_03122020/public/sass/sass_folders/base/_base.scss */
+h1,
+p {
+  font-family: "Roboto", sans-serif; }
+
+/* line 14, /Users/sd/Documents/Formation FrontEnd/P3_Ndiaye_Salmane/NdiayeSalmane_3_03122020/public/sass/sass_folders/base/_base.scss */
+a {
+  text-decoration: none; }
+
+/*$first-gradient:;
+$second-gradient:;*/
+
+/*# sourceMappingURL=main.css.map */

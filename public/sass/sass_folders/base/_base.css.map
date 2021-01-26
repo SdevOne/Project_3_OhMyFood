@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "_base.css",
+  "sources": [
+    "_base.scss",
+    "_typography.scss"
+  ],
+  "mappings": ";AAEA,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,KAAM,GACpB;;;AAID,AAAA,EAAE;AACF,AAAA,CAAC,CAAC;EACE,WAAW,ECPF,QAAQ,EACrB,UAAU,GDOT;;;AAED,AAAA,CAAC,CAAC;EACE,eAAe,EAAE,IAAK,GACzB",
+  "names": []
+}
