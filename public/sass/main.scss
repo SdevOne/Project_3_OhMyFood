@@ -1,8 +1,18 @@
 @import './sass_folders/base/base.scss';
-@import './sass_folders/composants/btn.scss';
+
+@import './sass_folders/composants/icons.scss';
 @import './sass_folders/composants/novelty_alert.scss';
+@import './sass_folders/composants/btn.scss';
+
 @import './sass_folders/layouts/header.scss';
+@import './sass_folders/layouts/menu.scss';
 @import './sass_folders/layouts/footer.scss';
-@import './sass_folders/pages/home_restaurants.scss';
-@import './sass_folders/pages/home_rules.scss';
+
+@import './sass_folders/pages/home_loading_spinner.scss';
+@import './sass_folders/pages/home_presentation.scss';
+@import './sass_folders/pages/home_localisation.scss';
+@import './sass_folders/pages/home_restaurants_list.scss';
+@import './sass_folders/pages/home_operation.scss';
+
 @import './sass_folders/utils/variables.scss';
+@import './sass_folders/utils/mixins.scss';
