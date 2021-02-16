@@ -1,0 +1,100 @@
+@import '../utils/variables.scss';
+
+.operation {
+    width: 100%;
+    height: auto;
+
+    &__container {
+        padding: 5rem 2rem;
+    }
+
+    &__cards-container {
+        height: 27rem;
+        margin-top: 3rem;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__card {
+        height: 7rem;
+        margin-left: .2rem;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        background-color: $primary-background;
+
+        &:hover {
+            background-color: lighten($color-primary, 35%);
+            color: $color-primary;
+        }
+
+    }
+
+    &__option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.6rem;
+    }
+
+    &__number {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-left: -1rem;
+        border-radius: 2rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: white;
+        background-color: $color-primary;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        margin-left: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    &__text {
+        margin-left: 2.5rem;
+        color: black !important;
+        font-weight: 500;
+    }
+
+    @media(min-width:768px) {
+
+        &__cards-container {}
+    }
+
+    @media(min-width:1024px) {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            margin-bottom: 3rem;
+        }
+
+        &__cards-container {
+            width: 96rem;
+            height: auto;
+            margin: 0;
+            flex-direction: row;
+        }
+
+        &__card {
+            width: 28rem;
+        }
+    }
+
+
+}
