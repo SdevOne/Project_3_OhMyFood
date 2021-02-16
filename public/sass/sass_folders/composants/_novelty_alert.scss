@@ -1,0 +1,18 @@
+@import "../utils/variables.scss";
+
+.novelty-alert {
+    width: 8rem;
+    height: 3rem;
+    border-radius: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 45%);
+}
