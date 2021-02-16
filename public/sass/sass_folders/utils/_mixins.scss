@@ -1,0 +1,5 @@
+@import "variables.scss";
+
+@mixin btn-gradient {
+    background: linear-gradient($color-secondary, $color-primary);
+}
