@@ -3,14 +3,42 @@
 .header {
     width: 100%;
     height: 6.3rem;
-    box-shadow: $box-shadow;
+    box-shadow: $card-shadow;
+    position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
     background-color: $secondary-background;
 
     &__logo {
         width: 16rem;
         height: 3rem;
-        margin-top: 2.5rem;
+        margin: auto;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 2.2rem;
+        left: 2rem;
+    }
+
+    @media(min-width:768px) {
+
+        &__icon {
+            left: 9rem;
+        }
+    }
+
+    @media(min-width:1024px) {
+
+        &__icon {
+            left: 12rem;
+        }
+    }
+
+    @media(min-width:2560px) {
+
+        &__icon {
+            left: 46rem;
+        }
     }
 }
