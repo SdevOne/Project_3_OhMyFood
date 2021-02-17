@@ -20,19 +20,27 @@
     transform: translate(-50%, -50%);
     color: $color-secondary;
     font-size: 8rem;
-    animation: spinner 3s ease-in-out 2 forwards;
+    animation: spinner 3.5s ease-in-out 1 forwards;
 
     @keyframes spinner {
         0% {
             transform: translate(-50%, -50%) rotate(-45deg) scale(0.2);
         }
 
-        50% {
-            transform: translate(-50%, -50%) rotate(1880deg);
+        40% {
+            transform: translate(-50%, -50%) rotate(-980deg);
+        }
+
+        70% {
+            transform: translate(-50%, -50%) rotate(-90deg) rotate(-45deg);
+        }
+
+        90% {
+            transform: translate(-50%, -50%) rotate(-360deg) rotate(-135deg);
         }
 
         100% {
-            transform: translate(-50%, -50%) rotate(-360deg) scale(1.4) rotate(-45deg);
+            transform: translate(-50%, -50%) scale(1.4) rotate(-45deg);
         }
     }
 }
@@ -66,7 +74,7 @@
 .solid-heart {
     opacity: 0;
     font-size: 2.8rem;
-    top: -.2.8rem;
+    /*top: -.2rem;*/
     left: -2.15rem;
 }
 
