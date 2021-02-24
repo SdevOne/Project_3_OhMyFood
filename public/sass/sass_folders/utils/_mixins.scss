@@ -1,5 +1,61 @@
 @import "variables.scss";
 
-@mixin btn-gradient {
-    background: linear-gradient($color-secondary, $color-primary);
+@mixin like-icon-hover {
+    &:hover {
+        cursor: pointer;
+
+        .empty-heart {
+            opacity: 0;
+        }
+
+        .solid-heart {
+            opacity: 1;
+            height: 2.5rem;
+            transition: height .9s ease-out;
+        }
+    }
+}
+
+@mixin menuFadeIn {
+    $nth-child-number: 1;
+    $delay: 0;
+
+    @while($nth-child-number < 5) {
+        $nth-child-number: $nth-child-number + 1;
+        $delay: $delay + 0.5;
+
+        &:nth-child(#{$nth-child-number}) {
+            animation: fadein 3s #{$delay} + s forwards;
+        }
+    }
+}
+
+@mixin large-mobile {
+    @media(min-width:425px) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media(min-width:768px) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media(min-width:1024px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width:1440px) {
+        @content;
+    }
+}
+
+@mixin tv {
+    @media(min-width:2560px) {
+        @content;
+    }
 }
