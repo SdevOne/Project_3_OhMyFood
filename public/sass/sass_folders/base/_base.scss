@@ -88,6 +88,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -129,14 +130,14 @@ table {
     border-spacing: 0;
 }
 
-/* ---- */
+/* base */
 
 @import 'typography.scss';
 @import '../utils/variables.scss';
 
 html {
     font-size: 62.5%;
-    font-family: $text-police;
+    font-family: $secondary-font;
 }
 
 h1 {
@@ -164,8 +165,4 @@ hr {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-.card-shadow {
-    box-shadow: $card-shadow;
 }
