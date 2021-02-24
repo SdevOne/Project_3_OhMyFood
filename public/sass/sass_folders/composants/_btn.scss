@@ -1,5 +1,4 @@
 @import "../utils/variables.scss";
-@import "../utils/mixins.scss";
 
 .btn {
     width: 21.5rem;
@@ -7,15 +6,16 @@
     border: none;
     border-radius: 2.5rem;
     box-shadow: 0 .4rem .7rem .2rem #CBCBCB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
     color: White;
-    @include btn-gradient;
-
+    background: linear-gradient(-10deg, $color-primary, $color-secondary);
 
     &:hover {
         cursor: pointer;
-        filter: brightness(105%);
+        filter: brightness(110%);
         box-shadow: 0 .4rem .6rem .2rem darken(#CBCBCB, 15%);
-
     }
 }
