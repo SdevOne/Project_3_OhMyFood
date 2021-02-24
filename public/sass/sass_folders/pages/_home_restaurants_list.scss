@@ -1,12 +1,25 @@
-@import "../utils/mixins.scss";
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
 
 .restaurants-list {
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 200;
     background-color: $tertiary-background;
 
     &__container {
         padding: 5rem 2rem;
+
+        @include large-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
     }
 
     &__cards-container {
@@ -16,13 +29,27 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @include tablet-portrait {
+            width: 72.8rem;
+            height: 58rem;
+            margin: 3rem auto 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media(min-width:1400px) {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__card {
-        width: 33.5rem;
         height: 25rem;
-        border-radius: 2rem;
-        background-color: $secondary-background;
+
+        @include large-mobile {
+            width: 33.5rem;
+        }
     }
 
     &__img-container {
@@ -42,10 +69,6 @@
         justify-content: space-between;
     }
 
-    &__text {
-        font-weight: 300;
-    }
-
     &__card-title {
         font-size: 1.7rem;
     }
@@ -54,34 +77,13 @@
         font-size: 1.6rem;
         margin-top: 1rem;
     }
-    
-    &__icon{
-        
-    }
 
-
-    @media(min-width:768px) {
-
-        &__container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__cards-container {
-            width: 72.8rem;
-            height: 58rem;
-            margin: 3rem auto 0;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-    }
-
-    @media(min-width:1400px) {
-
-        &__cards-container {
-            width: 100%;
-            height: auto;
-        }
+    &__icon {
+        width: 2.5rem;
+        height: 2.4rem;
+        margin-right: -.5rem;
+        display: flex;
+        flex-direction: column;
+        @include like-icon-hover;
     }
 }
