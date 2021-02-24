@@ -1,20 +1,20 @@
-@import "../base/typography.scss";
-@import "../utils/variables.scss";
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
 
-.main-image {
+.menu-header-image {
     width: 100%;
     height: 26rem;
     object-fit: cover;
 
-    @media(min-width:768px) {
+    @include tablet-portrait {
         height: 40rem;
     }
 
-    @media(min-width:1024px) {
+    @include tablet-landscape {
         height: 50rem;
     }
 
-    @media(min-width:1440px) {
+    @include desktop {
         height: 70rem;
     }
 }
@@ -28,44 +28,111 @@
     flex-direction: column;
     background-color: $primary-background;
 
-    &__title {
+    @include tablet-landscape {
+        width: 80%;
+        margin: -15rem auto 0;
+    }
+
+    @include desktop {
+        width: 80%;
+        margin: -25rem auto 0;
+    }
+
+    &__restaurant-name {
         margin: 3.5rem 3.5rem 0 2.5rem;
         display: flex;
         justify-content: space-between;
-        align-content: center;
-        font-family: $logo-title-police;
+        align-items: center;
+        font-family: $primary-font;
+
+        @include tablet-portrait {
+            margin-left: 9rem;
+            margin-right: 9rem;
+        }
+
+        @include tablet-landscape {
+            margin-left: 12rem;
+            margin-right: 12rem;
+        }
+
+        @include desktop {
+            width: 27%;
+            margin: 5rem auto 0;
+        }
+
+        @include tv {
+            width: 15%;
+        }
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.4rem;
+        margin-top: -.3rem;
+        display: flex;
+        flex-direction: column;
+        @include like-icon-hover;
     }
 
     &__list {
         margin: 0 1.5rem;
+
+        @include tablet-portrait {
+            margin-left: 8rem;
+            margin-right: 8rem;
+        }
+
+        @include tablet-landscape {
+            margin-left: 11rem;
+            margin-right: 11rem;
+        }
+
+        @include desktop {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 
     &__content {
         margin-top: 4rem;
         opacity: 0;
         animation: fadein 2s forwards;
-    }
 
-    &__sub-title {
+        @include desktop {
+            width: 40rem;
+            margin-top: 6rem;
 
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 300;
+            &:nth-child(3) {
+                margin: 6rem auto 0;
+            }
         }
 
+        @include tv {
+            &:nth-child(3) {
+                margin: 6rem 0 0;
+            }
+        }
+    }
+
+    &__heading-container {
         margin-left: 1rem;
+    }
+
+    &__heading {
+        font-size: 1.5rem;
+        font-weight: 300;
     }
 
     &__card {
         opacity: 0;
         width: 100%;
-        height: 7rem;
         margin-top: 1.3rem;
         display: flex;
         justify-content: space-between;
-        border-radius: 1.5rem;
-        box-shadow: $card-shadow;
-        background-color: $secondary-background;
 
         @keyframes fadein {
             0% {
@@ -77,48 +144,46 @@
             }
         }
 
-        &:nth-child(2) {
-            animation: fadein 3s .5s forwards;
-        }
-
-        &:nth-child(3) {
-            animation: fadein 3s 1s forwards;
-        }
-
-        &:nth-child(4) {
-            animation: fadein 3s 1.5s forwards;
-        }
-
-        &:nth-child(5) {
-            animation: fadein 3s 2s forwards;
-        }
+        @include menuFadeIn;
 
         &:hover {
             cursor: pointer;
         }
 
-        &:hover .menu__d {
-            width: 19.2rem;
+        &:hover .menu__card-text {
+            width: 18rem;
         }
 
-        &:hover > .menu__choice {
+        &:hover > .menu__card-check-mark {
             opacity: 1;
             width: 8rem;
             transition: width 1s;
 
             .fa-check-circle {
-                transition: transform .8s;
-                transform: translate(-50%, -50%) rotate(1080deg);
+                transition: transform 1s .2s;
+                transform: translate(-50%, -50%) rotate(1440deg);
+            }
+        }
+
+        @include tablet-portrait {
+            &:hover .menu__card-text {
+                width: 30rem;
+            }
+        }
+
+        @include desktop {
+            margin-top: 2.3rem;
+
+            &:hover .menu__card-text {
+                width: 25rem;
             }
         }
     }
 
-
-    &__description {
+    &__card-description {
         width: 100%;
         border-radius: 1.5rem;
         padding: 1.5rem 1rem;
-        background-color: $secondary-background;
     }
 
     &__card-title {
@@ -126,25 +191,29 @@
         margin-bottom: 1rem;
     }
 
-    &__card-text {
-        font-weight: 300;
+    &__card-text-container {
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
     }
 
-    &__d {
+    &__card-text {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    &__price {
+    &__card-price {
         font-weight: bold;
         margin-right: 2rem;
+        margin-left: 1rem;
+
+        @include tablet-portrait {
+            margin-left: 2rem;
+        }
     }
 
-    &__choice {
+    &__card-check-mark {
         width: 0;
         opacity: 0;
         height: 100%;
@@ -155,95 +224,16 @@
         background-color: $color-tertiary;
 
         .fa-check-circle {
-            color: #fff;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: #fff;
         }
     }
 
     &__btn {
         margin: 5rem auto 8.5rem;
-
     }
-
-    @media(min-width:768px) {
-
-        &__title {
-            margin-left: 9rem;
-            margin-right: 9rem;
-        }
-
-        &__list {
-            margin-left: 8rem;
-            margin-right: 8rem;
-        }
-    }
-
-    @media(min-width:1024px) {
-
-        width: 80%;
-        margin: -15rem auto 0;
-
-        &__title {
-            margin-left: 12rem;
-            margin-right: 12rem;
-        }
-
-        &__list {
-            margin-left: 11rem;
-            margin-right: 11rem;
-        }
-    }
-
-    @media(min-width:1440px) {
-        width: 80%;
-        margin: -25rem auto 0;
-
-        &__title {
-            width: 27%;
-            margin: 5rem auto 0;
-        }
-
-        &__list {
-            width: 80%;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        &__content {
-            width: 40rem;
-            margin-top: 6rem;
-        }
-
-        &__content:nth-child(3) {
-            margin: 6rem auto 0;
-        }
-
-        &__card {
-
-            margin-top: 2.3rem;
-
-            &:hover .menu__d {
-                width: 25rem;
-            }
-        }
-    }
-
-    @media(min-width:2560px) {
-
-        &__title {
-            width: 15%;
-        }
-
-        &__content:nth-child(3) {
-            margin: 6rem 0 0;
-        }
-
-    }
-
 }
