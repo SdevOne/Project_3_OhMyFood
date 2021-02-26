@@ -761,7 +761,7 @@ a {
 .restaurants-list__card {
   height: 25rem;
 }
-@media (min-width: 425px) {
+@media (min-width: 375px) {
   .restaurants-list__card {
     width: 33.5rem;
   }

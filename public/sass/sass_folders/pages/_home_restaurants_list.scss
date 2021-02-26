@@ -47,7 +47,7 @@
     &__card {
         height: 25rem;
 
-        @include large-mobile {
+        @media(min-width:375px) {
             width: 33.5rem;
         }
     }
